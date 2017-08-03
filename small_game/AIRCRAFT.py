@@ -197,8 +197,7 @@ class Enemy(pygame.sprite.Sprite):
         self.y = 0
         self.screen = screen
         self.direction = 'right'
-        self.bullet_list = []
-
+        self.bullet_list = [
 
     def display(self):
         self.screen.blit(self.image, (self.x, self.y))
@@ -211,10 +210,9 @@ class Enemy(pygame.sprite.Sprite):
         for bullet in self.bullet_list:
             bullet.display()
 
-
     def move(self):
         self.y += 1
-
+            
     def shoot_bullet(self):
         # control enemy bullet
         num = random.randint(1, 50)
@@ -227,7 +225,6 @@ class Enemy(pygame.sprite.Sprite):
             return True
         else:
             return False
-
 
 
 class EnemyBullet(pygame.sprite.Sprite):
@@ -253,7 +250,6 @@ class EnemyBullet(pygame.sprite.Sprite):
             return True
         else:
             return False
-
 
 def key_control(hero):
 
