@@ -1,1 +1,1 @@
-# This is my first pygame AIRCRAFT!
+# some pygames!
